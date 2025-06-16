@@ -16,12 +16,12 @@ export const assets = {
 
 export const dummyTrailers = [
     {
-        image: "https://img.youtube.com/vi/WpW36ldAqnM/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=WpW36ldAqnM'
+        image: "https://tse1.mm.bing.net/th?id=OIP.4iaBbNJHbowFwMkKQLOOqQHaEK&pid=Api&P=0&h=180",
+        videoUrl: 'https://youtu.be/XLuL_TXbK1g?si=dSVMHCHgnurxkBBr'
     },
     {
-        image: "https://img.youtube.com/vi/-sAOWhvheK8/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=-sAOWhvheK8'
+        image: "https://tse4.mm.bing.net/th?id=OIP.LgaI5pp8AAZ-5eegLT6IoAHaKm&pid=Api&P=0&h=180",
+        videoUrl: 'https://youtu.be/dKrVegVI0Us?si=6WJKgM_WOaeR3Biy'
     },
     {
         image: "https://img.youtube.com/vi/1pHDWnXmK7Y/maxresdefault.jpg",
@@ -33,7 +33,7 @@ export const dummyTrailers = [
     },
 ]
 
-const dummyCastsData = [
+export const dummyCastsData = [
     { "name": "Milla Jovovich", "profile_path": "https://image.tmdb.org/t/p/original/usWnHCzbADijULREZYSJ0qfM00y.jpg", },
     { "name": "Dave Bautista", "profile_path": "https://image.tmdb.org/t/p/original/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg", },
     { "name": "Arly Jover", "profile_path": "https://image.tmdb.org/t/p/original/zmznPrQ9GSZwcOIUT0c3GyETwrP.jpg", },
@@ -73,7 +73,7 @@ export const dummyShowsData = [
         "vote_average": 6.4,
         "vote_count": 15000,
         "runtime": 102,
-    },
+    },  
     {
         "_id": "1232546",
         "id": 1232546,
