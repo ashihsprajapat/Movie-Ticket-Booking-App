@@ -2,32 +2,49 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import HomePage from './pages/user/HomePage';
+import Details from './pages/user/Details';
+import MyBooking from './pages/user/MyBooking';
+import SeatSelection from './pages/user/SeatSelection';
+import MainDashborde from './pages/admin/MainDashborde';
+import Dashbord from './pages/admin/Dashbord';
+import AddShow from './pages/admin/AddShow';
+import ListShow from './pages/admin/ListShow';
+import ListBookings from './pages/admin/ListBookings';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar />
+
+      <Routes>
+
+
+
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movies/:id" element={<Details />} />
+        <Route path="/my-bookings" element={<MyBooking />} />
+        <Route path="/movies/:id/:date" element={<SeatSelection />} />
+
+        <Route path='/admin' element={<MainDashborde />}>
+
+          <Route path='' element={<Dashbord />} />
+          <Route path='add-shows' element={<AddShow />} />
+          <Route path='list-shows' element={<ListShow />} />
+          <Route path='list-booking' element={<ListBookings />} />
+
+        </Route>
+
+      </Routes>
+
+      <Footer />
+
     </>
   )
 }
