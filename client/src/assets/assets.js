@@ -73,7 +73,7 @@ export const dummyShowsData = [
         "vote_average": 6.4,
         "vote_count": 15000,
         "runtime": 102,
-    },  
+    },
     {
         "_id": "1232546",
         "id": 1232546,
@@ -327,7 +327,7 @@ export const dummyBookingData = [
             showPrice: 59,
         },
         "amount": 147,
-        "bookedSeats": ["A1", "A2","A3"],
+        "bookedSeats": ["A1", "A2", "A3"],
         "isPaid": true,
     },
 ]

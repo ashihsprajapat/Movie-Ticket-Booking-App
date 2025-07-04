@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     color: white;
     background-color: #09090B;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
 }
