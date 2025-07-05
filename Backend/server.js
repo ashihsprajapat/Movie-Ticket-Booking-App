@@ -11,6 +11,7 @@ import { serve } from "inngest/express";
 import { inngest, functions } from "./inngest/index.js"
 import showRouter from './routes/shows.routes.js';
 import bookingRoutes from './routes/booking.routes.js';
+import adminRouter from './routes/admin.route.js';
 
 
 
@@ -40,3 +41,4 @@ app.use("/api/inngest", serve({ client: inngest, functions }));
 
 app.use("/api/show", showRouter)
 app.use("/api/booking", bookingRoutes)
+app.use("/api/admin", adminRouter)

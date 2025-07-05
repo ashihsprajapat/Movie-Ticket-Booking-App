@@ -77,7 +77,7 @@ export const addShow = async (req, res) => {
 }
 
 
-//aou to get all shows from the database
+//api to get all shows from the database
 export const getShows = async (req, res) => {
     try {
         let shows = await Show.find({ showDateTime: { $gte: new Date() } }).populate("movie").sort({ showDateTime: 1 })
