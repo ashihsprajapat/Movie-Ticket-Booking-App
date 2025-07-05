@@ -9,6 +9,8 @@ import { clerkClient, requireAuth, getAuth } from '@clerk/express'
 //inngest dependency
 import { serve } from "inngest/express";
 import { inngest, functions } from "./inngest/index.js"
+import showRouter from './routes/shows.routes.js';
+import bookingRoutes from './routes/booking.routes.js';
 
 
 
@@ -34,3 +36,7 @@ app.get("/", (req, res) => { // basic api request
     res.send("Server is live")
 })
 app.use("/api/inngest", serve({ client: inngest, functions }));
+
+
+app.use("/api/show", showRouter)
+app.use("/api/booking", bookingRoutes)

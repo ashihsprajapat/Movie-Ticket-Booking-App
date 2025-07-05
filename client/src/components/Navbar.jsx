@@ -3,7 +3,14 @@ import React from 'react'
 import { assets } from './../assets/assets';
 import { Search, Menu, X } from 'lucide-react';
 
+
+
+import { SignIn, SignUp, UserButton, useUser, useClerk } from "@clerk/clerk-react";
+
 function Navbar() {
+
+    const { user } = useUser();
+    const { openSignIn } = useClerk();
 
     const navLinks = [
         { name: 'Home', path: '/' },
@@ -44,9 +51,17 @@ function Navbar() {
                 {/* Desktop Right */}
                 <div className="hidden md:flex items-center gap-4">
                     <Search className='  text-white   ' />
-                    <button className=" bg-red-700 text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500">
-                        Login
-                    </button>
+                    {
+                        user ?
+                            <UserButton />
+                            : (
+                                <button className=" bg-red-700 text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500"
+                                    onClick={openSignIn}>
+                                    Login
+                                </button>
+                            )
+                    }
+
                 </div>
 
                 {/* Mobile Menu Button */}
